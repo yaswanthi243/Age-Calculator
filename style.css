@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f0f2f5;
+  font-size: 16px; /* Base font size */
+}
+
+nav {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.input-card, .result-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Limit maximum width for larger screens */
+  margin: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+  font-weight: 500;
+}
+
+input[type="date"],
+input[type="file"],
+select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.calculate-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.calculate-btn:hover {
+  background: #2980b9;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#image-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #3498db;
+}
+
+#image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.age-result {
+  text-align: center;
+}
+
+#age-output {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin: 1rem 0;
+}
+
+#age-output span {
+  color: #3498db;
+  font-weight: bold;
+}
+
+#birthday-output, #gender-output {
+  color: #7f8c8d;
+  font-style: bold;
+}
+
+.go-back-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.go-back-btn:hover {
+  background: #c0392b;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and small desktops */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .input-card, .result-card {
+    padding: 2rem;
+  }
+
+  #image-preview {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* For mobile devices (Android, iOS, etc.) */
+@media (max-width: 599px) {
+  body {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  nav {
+    padding: 0.8rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .input-card, .result-card {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .calculate-btn {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  #image-preview {
+    width: 120px;
+    height: 120px;
+  }
+
+  #age-output {
+    font-size: 1rem;
+  }
+}
+
+/* For very small screens (e.g., iPhone SE) */
+@media (max-width: 320px) {
+  body {
+    font-size: 12px;
+  }
+
+  .input-card, .result-card {
+    padding: 0.8rem;
+  }
+
+  .calculate-btn {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  #image-preview {
+    width: 100px;
+    height: 100px;
+  }
+}
